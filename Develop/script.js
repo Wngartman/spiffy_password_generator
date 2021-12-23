@@ -15,7 +15,7 @@ function generatePassword() {
 
   var length = prompt("How many characters? (Must be between 8-128)");
 
-  if (length >= 128 || length < 8) {
+  if (length >= 128 && length < 8) {
     alert("Length must be greater than 8 and less than 128 Characters")
   } else {
     alert("Perfect! " + length + " works!")
