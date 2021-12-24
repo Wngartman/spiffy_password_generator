@@ -15,7 +15,7 @@ function generatePassword() {
 
   var length = prompt("How many characters? (Must be between 8-128)");
 
-  if (length >= 128 || length < 8) {
+  if (length > 128 || length < 8) {
     alert("Length must be greater than 8 and less than 128 Characters")
     var length = prompt("How many characters? (Must be between 8-128)");
   } else {
@@ -49,12 +49,16 @@ function generatePassword() {
     specifics = special.concat(specifics);
   }
 
-  for (let i = 0, x = specifics.length; i < length; i++) {
-    password += specifics.charAt(Math.floor(Math.random() * x));;
+  if (confirmLower == false && confirmCapital == false && confirmNumeric == false && confirmSpecial == false){
+    alert ("You must choose at least one option")
+    generatePassword();
+  } else{
+    for (let i = 0, x = specifics.length; i < length; i++) {
+      password += specifics.charAt(Math.floor(Math.random() * x));;
+    }
+  
+    return password
   }
-
-  return password
-
 }
 
 // Add event listener to generate button
