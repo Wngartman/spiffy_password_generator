@@ -25,7 +25,7 @@ function generatePassword() {
   } else {
     alert("Perfect! " + length + " works!")
 
-    var specifics = " ";
+    var specifics = "";
     var lowercase = "abcdefghijklmnopqrstuvwxyz"
     var capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     var numeric = "01234567890"
