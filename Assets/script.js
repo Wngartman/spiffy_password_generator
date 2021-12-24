@@ -21,6 +21,7 @@ function generatePassword() {
 
   } if (length > 128 || length < 8 || length == undefined) {
     alert("Length must be greater than 8 and less than 128 Characters")
+    return generatePassword();
   } else {
     alert("Perfect! " + length + " works!")
 
