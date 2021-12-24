@@ -33,7 +33,7 @@ function generatePassword() {
   var lowercase = "abcdefghijklmnopqrstuvwxyz"
   var capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   var numeric = "01234567890"
-  var special = "!@#$%^&*()"
+  var special = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
   var password = "";
 
   if (confirmLower) {
